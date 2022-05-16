@@ -13,6 +13,8 @@
 
 <script>
 import Biography from "./components/Biography.vue";
+import './assets/style.css';
+
 
 export default {
   components: {
@@ -23,32 +25,5 @@ export default {
 
 
 
-
-
 <style>
-* {
-  box-sizing: content-box;
-}
-
-body {
-  background-color: black;
-  color: white;
-  background-image: url("./resources/images/backgroundPortfolio.jpg");
-  background-size: cover;
-}
-
-#main {
-  text-align: center;
-}
-
-h1 {
-  background-color: rgb(56, 56, 56);
-  padding: 1rem;
-}
-
-#principal {
-  background-color: rgba(61, 61, 61, 0.8);
-  margin: 5rem 2rem;
-  min-height: 70vh;
-}
 </style>
