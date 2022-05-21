@@ -43,6 +43,16 @@ header button{
   font-size: 2.5rem;
 }
 
+.left-arrow button, .right-arrow button{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(25, 26, 25);
+  color: rgb(78, 159, 61);
+  border: none;
+  font-size: 2rem;
+  margin: auto;
+}
+
 .carrousel button{
   padding: 2px 16px !important;
   margin: 0.5rem !important;
@@ -55,7 +65,7 @@ header button{
   margin: auto 0;
   padding: 0;
 }
-/*Aplicamos la propiedad object-fit cover, ajustar su tamaño y no perder la proporcion de nuestra imagen*/
+
 #photo img{
   object-fit: cover;
   width:100%;
