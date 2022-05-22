@@ -47,18 +47,11 @@
       <div class="left-arrow col-1">
         <button>&lt;</button>
       </div>
-      <div id="photo" class="col-3">
-        <img
-          src="./resources/images/mypicturefinal.jpg"
-          alt="Cargando imagen..."
-        />
-      </div>
-      <div class="container col-6">
+      <div class="col-9">
+
         <Biography title="Biografia" />
-      </div>
-      <!--       <div class="container col-9">
         <Technologys title="Tecnologias" />
-      </div> -->
+      </div>
       <div class="right-arrow col-1">
         <button>></button>
       </div>
