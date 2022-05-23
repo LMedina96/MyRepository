@@ -1,46 +1,7 @@
 <template>
   <main id="main">
     <!--!HEADER-->
-    <header>
-      <h1>Lucas Medina Portfolio</h1>
-      <nav>
-        <form class="container-fluid justify-content-start">
-          <button
-            class="
-              btn btn-sm btn-outline-secondary
-              border border-success
-              p-2
-              mb-2
-            "
-            type="button"
-          >
-            Biografia
-          </button>
-          <button
-            class="
-              btn btn-sm btn-outline-secondary
-              border border-success
-              p-2
-              mb-2
-            "
-            type="button"
-          >
-            Conocimientos
-          </button>
-          <button
-            class="
-              btn btn-sm btn-outline-secondary
-              border border-success
-              p-2
-              mb-2
-            "
-            type="button"
-          >
-            Portfolio
-          </button>
-        </form>
-      </nav>
-    </header>
+    <HeaderComponent title="Lucas Medina Portfolio" :buttons="['Biografia', 'Tecnologias', 'Portfolio']"/>
 
     <!--!BODY-->
     <div id="principal" class=".container-fluid rounded row">
@@ -48,9 +9,9 @@
         <button>&lt;</button>
       </div>
       <div class="col-9">
-
         <Biography title="Biografia" />
         <Technologys title="Tecnologias" />
+        <Portfolio title="Portfolio" />
       </div>
       <div class="right-arrow col-1">
         <button>></button>
@@ -67,13 +28,17 @@
 
 <script>
 import "./assets/style.css";
+import HeaderComponent from "./components/HeaderComponent.vue";
 import Biography from "./components/Biography.vue";
 import Technologys from "./components/Technologys.vue";
+import Portfolio from "./components/Portfolio.vue";
 
 export default {
   components: {
+    HeaderComponent,
     Biography,
     Technologys,
+    Portfolio,
   },
 };
 </script>

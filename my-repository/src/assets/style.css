@@ -14,21 +14,6 @@ body {
   text-align: center;
 }
 
-header {
-  background-color: rgb(25, 26, 25);
-  padding: 1rem;
-  width: 90vw;
-  margin: 1rem auto;
-  border-radius: 20px
-}
-
-header button{
-  width: 150px;
-  margin: 0 1rem;
-  color: rgb(216, 233, 168) !important;
-  border-radius: 20px !important;
-}
-
 #principal {
   background-color: rgb(25, 26, 25);
   border-radius: 20px !important;

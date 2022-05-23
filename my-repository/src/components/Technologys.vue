@@ -22,27 +22,27 @@ export default {
             items: [
                 {   
                     id: 1,
-                    img: "https://via.placeholder.com/150",
+                    img: "https://via.placeholder.com/120",
                     alt: "mockup1",
                 },
                 {
                     id: 2,
-                    img: "https://via.placeholder.com/150",
+                    img: "https://via.placeholder.com/120",
                     alt: "mockup2"
                 },
                 {
                     id: 3,
-                    img: "https://via.placeholder.com/150", 
+                    img: "https://via.placeholder.com/120", 
                     alt: "mockup3"
                 },
                 {
                     id: 4,
-                    img: "https://via.placeholder.com/150", 
+                    img: "https://via.placeholder.com/120", 
                     alt: "mockup4"
                 },
                 {
                     id: 5,
-                    img: "https://via.placeholder.com/150", 
+                    img: "https://via.placeholder.com/120", 
                     alt: "mockup5"
                 },
             ]
