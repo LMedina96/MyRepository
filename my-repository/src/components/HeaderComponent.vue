@@ -55,14 +55,15 @@ header {
   background-color: rgb(25, 26, 25);
   padding: 1rem;
   width: 90vw;
-  margin: 1rem auto;
+  margin: 0rem auto;
   border-radius: 20px;
+  border: 1px solid rgb(78, 159, 61);
 }
 
 header button {
   width: 150px;
   margin: 0 1rem;
-  color: rgb(216, 233, 168) !important;
+  border: 2px solid rgb(78, 159, 61) !important;
   border-radius: 20px !important;
 }
 

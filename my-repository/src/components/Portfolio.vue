@@ -16,7 +16,7 @@
           </p>
         </div>
         <div class="card-body">
-          <a href="#" class="card-link">{{proyect.proyectLink}}</a>
+          <a href="#" class="card-link">Ingresar al sitio</a>
         </div>
       </li>
     </ul>
@@ -37,8 +37,7 @@ export default {
           proyectImage: "https://via.placeholder.com/300",
           proyectTitle: "Proyecto 1",
           proyectDescription:
-            "Lorem ipsum dolor sit amet, sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          proyectLink: "#",
+            "Lorem ipsum dolor sit amet, sint occaecat cupidatat non proident, sunt in culpa  non proident",
         },
         {
           id: 2,
@@ -46,7 +45,6 @@ export default {
           proyectTitle: "Proyecto 2",
           proyectDescription:
             "Lorem ipsum dolor sit amet, sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          proyectLink: "#",
         },
         {
           id: 3,
@@ -54,7 +52,6 @@ export default {
           proyectTitle: "Proyecto 3",
           proyectDescription:
             "Lorem ipsum dolor sit amet, sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          proyectLink: "#",
         },
         {
           id: 4,
@@ -62,7 +59,6 @@ export default {
           proyectTitle: "Proyecto 4",
           proyectDescription:
             "Lorem ipsum dolor sit amet, sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          proyectLink: "#",
         },
       ],
     };
@@ -80,13 +76,14 @@ ul{
 }
 
 .card{
-    width: 18rem;
+    width: 16rem;
+    max-height: 400px;
     margin: 1rem;
     background-color: rgb(20, 20, 20);
 }
 
 .card img{
-    height: 150px;
+    height: 120px;
 }
 
 .card a{
@@ -95,6 +92,7 @@ ul{
 
 .card p{
     font-size: 14px;
+    height: 150px;
 }
 
 </style>

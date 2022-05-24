@@ -2,14 +2,14 @@
   <div>
     <h2>{{ title }}</h2>
     <div class="row">
-      <div id="photo" class="col-3">
+      <div id="photo">
         <img
           src="../resources/images/mypicturefinal.jpg"
           alt="Cargando imagen..."
         />
       </div>
       <div class="col-8">
-        <p>
+        <p class="textBiography">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
           perspiciatis, a dolores fugiat quos molestias blanditiis nulla illo
           quod reprehenderit, rem ipsam beatae repudiandae facere, quia
@@ -48,4 +48,23 @@ export default {
 </script>
 
 <style>
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between
+}
+
+#photo{
+  width: 250px;
+  height:400px;
+  margin: auto 0;
+  padding: 0;
+}
+
+#photo img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+}
 </style>
