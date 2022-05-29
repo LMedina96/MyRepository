@@ -58,7 +58,7 @@ export default {
 #photo{
   width: 250px;
   height:400px;
-  margin: auto 0;
+  margin: auto;
   padding: 0;
 }
 

@@ -51,11 +51,17 @@ export default {
                     alt: "Python Icono",
                     name: "Python"
                 },
-                                {
+                {
                     id: 6,
                     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
                     alt: "React Icono",
                     name: "React"
+                },
+                {
+                    id: 7,
+                    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", 
+                    alt: "Angular Icono",
+                    name: "Angular"
                 },
             ]
         }
@@ -66,6 +72,14 @@ export default {
 
 <style scoped>
 
+.technologys{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
 img{
     width: 100px;
     height: 100px;
@@ -73,8 +87,11 @@ img{
 
 ul li{
     list-style: none;
-    display: inline-block;
-    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
 
 </style>

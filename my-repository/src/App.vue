@@ -1,27 +1,22 @@
 <template>
   <main id="main">
     <!--!HEADER-->
-    <HeaderComponent title="Lucas Medina Portfolio" :buttons="['Biografia', 'Tecnologias', 'Portfolio']"/>
+    <HeaderComponent title="Lucas Medina Portfolio" v-on:change-page="getPageId"/>
 
     <!--!BODY-->
     <div id="principal" class=".container-fluid rounded row">
-      <div class="left-arrow col-1">
-        <button>&lt;</button>
+      <div class="left-arrow col-1 col-sm-1">
+        <button @click="removePageId()">&lt;</button>
       </div>
-      <div class="col-9">
-        <Biography title="Biografia" />
-        <Technologys title="Tecnologias" />
-        <Portfolio title="Portfolio" />
+      <div id="bodyStructure" class="col-9 col-sm-8">
+        <Biography v-if="setPageValue == 1" title="Biografia" />
+        <Technologys v-else-if="setPageValue == 2" title="Tecnologias" />
+        <Portfolio v-else-if="setPageValue == 3" title="Portfolio" />
       </div>
-      <div class="right-arrow col-1">
-        <button>></button>
+      <div class="right-arrow col-1 col-sm-1">
+        <button @click="addPageId()">></button>
       </div>
-
-      <div class="container carrousel">
-        <button type="button" class="active"></button>
-        <button type="button"></button>
-        <button type="button"></button>
-      </div>
+      <Carrousel :CarrouselButtonsNumber = '3' v-on:get-button-index="getButtonIndex"/>
     </div>
   </main>
 </template>
@@ -32,6 +27,7 @@ import HeaderComponent from "./components/HeaderComponent.vue";
 import Biography from "./components/Biography.vue";
 import Technologys from "./components/Technologys.vue";
 import Portfolio from "./components/Portfolio.vue";
+import Carrousel from "./components/Carrousel.vue"
 
 export default {
   components: {
@@ -39,7 +35,42 @@ export default {
     Biography,
     Technologys,
     Portfolio,
+    Carrousel,
   },
+
+  data() {
+    return {
+      setPageValue: 1,
+    };
+  },
+
+  methods: {
+    getPageId(id) {
+      this.setPageValue = id;
+    },
+
+    getButtonIndex(index) {
+      this.setPageValue = index;
+    },
+
+    addPageId() {
+      if (this.setPageValue < 3) {
+        this.setPageValue++;
+      } else {
+        this.setPageValue = 1;
+      }
+    },
+
+    removePageId() {
+      if (this.setPageValue > 1) {
+        this.setPageValue--;
+      } else {
+        this.setPageValue = 3;
+      }
+    },
+  },
+
+
 };
 </script>
 

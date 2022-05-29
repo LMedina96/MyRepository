@@ -68,6 +68,10 @@ export default {
 
 <style>
 
+.container{
+  padding: 0;
+}
+
 ul{
     list-style: none;
     display: flex;

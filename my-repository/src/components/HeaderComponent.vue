@@ -1,40 +1,20 @@
 <template>
   <header>
-    <h1>{{title}}</h1>
+    <h1>{{ title }}</h1>
     <nav>
       <form class="container-fluid justify-content-start">
         <button
+          type="button"
           class="
             btn btn-sm btn-outline-secondary
             border border-success
             p-2
-            mb-2
-          "
-          type="button"
+            mb-2"
+          @click="changePage(button.id)"
+          v-for="button in buttons"
+          :key="button.id"
         >
-          <a href="#">{{buttons[0]}}</a>
-        </button>
-        <button
-          class="
-            btn btn-sm btn-outline-secondary
-            border border-success
-            p-2
-            mb-2
-          "
-          type="button"
-        >
-          <a href="#">{{buttons[1]}}</a>
-        </button>
-        <button
-          class="
-            btn btn-sm btn-outline-secondary
-            border border-success
-            p-2
-            mb-2
-          "
-          type="button"
-        >
-          <a href="#">{{buttons[2]}}</a>
+          <a href="#">{{button.text}}</a>
         </button>
       </form>
     </nav>
@@ -45,9 +25,24 @@
 export default {
   props: {
     title: String,
-    buttons: Array,
   },
-};
+
+  data() {
+    return {
+      buttons: [
+        { id: 1, text: "Biografia" },
+        { id: 2, text: "Tecnologias" },
+        { id: 3, text: "Portfolio" },
+      ],
+    };
+  },
+
+  methods: {
+    changePage(id) {
+      this.$emit("change-page", id);
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -67,9 +62,8 @@ header button {
   border-radius: 20px !important;
 }
 
-button a{
-    text-decoration: none;
-    color: rgb(78, 159, 61);
+button a {
+  text-decoration: none;
+  color: rgb(78, 159, 61);
 }
-
 </style>
