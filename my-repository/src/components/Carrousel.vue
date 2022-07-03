@@ -2,8 +2,7 @@
    <div class="container carrousel">
         <button
           v-for="carrouselButton in CarrouselButtonsNumber"
-          :key="carrouselButton"
-          @click="getButtonIndex()">
+          :key="carrouselButton">
         </button>
       </div>
 </template>
@@ -15,10 +14,10 @@ export default {
     },
 
     method: {
-        getButtonIndex(index) {
+        /* getButtonIndex(index) {
             this.$emit("get-button-index", index);
             console.log(index)
-        },
+        }, */
     }
 }
 </script>

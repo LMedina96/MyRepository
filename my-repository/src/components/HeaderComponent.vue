@@ -13,6 +13,7 @@
           @click="changePage(button.id)"
           v-for="button in buttons"
           :key="button.id"
+          v-bind:class="[{active: button.isActive}]"
         >
           <a href="#">{{button.text}}</a>
         </button>
@@ -29,17 +30,38 @@ export default {
 
   data() {
     return {
+      
       buttons: [
-        { id: 1, text: "Biografia" },
-        { id: 2, text: "Tecnologias" },
-        { id: 3, text: "Portfolio" },
+        {
+          id: 1,
+          text: "Biografia",
+          isActive: true,
+        },
+        {
+          id: 2,
+          text: "Tecnologias",
+          isActive: false,
+        },
+        {
+          id: 3,
+          text: "Portfolio",
+          isActive: false,
+        },
       ],
+      
     };
   },
 
   methods: {
     changePage(id) {
       this.$emit("change-page", id);
+      this.buttons.forEach(button => {
+        if(button.id == id) {
+          button.isActive = true;
+        } else {
+          button.isActive = false;
+        }
+      });
     },
   },
 }
@@ -58,7 +80,7 @@ header {
 header button {
   width: 150px;
   margin: 0 1rem;
-  border: 2px solid rgb(78, 159, 61) !important;
+  border: 3px solid rgb(78, 159, 61) !important;
   border-radius: 20px !important;
 }
 
@@ -66,4 +88,15 @@ button a {
   text-decoration: none;
   color: rgb(78, 159, 61);
 }
+
+button:active{
+  background-color: rgb(78, 159, 61);
+  color: rgb(25, 26, 25);
+}
+
+.active{
+  background-color: rgb(82, 82, 82);
+  color: rgb(25, 26, 25);
+}
+
 </style>

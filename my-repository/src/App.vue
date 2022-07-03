@@ -49,10 +49,6 @@ export default {
       this.setPageValue = id;
     },
 
-    getButtonIndex(index) {
-      this.setPageValue = index;
-    },
-
     addPageId() {
       if (this.setPageValue < 3) {
         this.setPageValue++;
@@ -67,6 +63,10 @@ export default {
       } else {
         this.setPageValue = 3;
       }
+    },
+
+    getButtonIndex(index) {
+      this.setPageValue = index;
     },
   },
 
